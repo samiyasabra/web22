@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Job Postings</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        /* Global Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #007bff;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+            margin: 0.2rem;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar a.active {
+            background-color: #0056b3;
+            font-weight: bold;
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.05rem;
+        }
+
+        td {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Button Styling */
+        td button {
+            background-color: #28a745;
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 0.5rem;
+        }
+
+        td button.view-job {
+            background-color: #007bff;
+        }
+
+        td button.view-job:hover {
+            background-color: #0056b3;
+        }
+
+        td button.edit-job {
+            background-color: #ffc107;
+        }
+
+        td button.edit-job:hover {
+            background-color: #e0a800;
+        }
+
+        td button.delete-job {
+            background-color: #dc3545;
+        }
+
+        td button.delete-job:hover {
+            background-color: #c82333;
+        }
+
+        /* Create Job Post Button */
+        .create-job-button {
+            background-color: #28a745;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 1rem;
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .create-job-button:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar a {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            th, td {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+
+            td button {
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="HR_Dashboard_Screen.html">Dashboard</a>
+        <a href="Internal_Job_Postings_Screen.html">Internal Job Postings</a>
+        <a href="External_Job_Postings_Screen.html">External Job Postings</a>
+        <a href="Employee_Ratings_Screen.html">Employee Ratings</a>
+        <a href="Shortlisting_Candidates_Screen.html">Shortlisting Candidates</a>
+        <a href="Onboarding_Checklist_Screen.html">Onboarding</a>
+        <a href="Performance_Metrics_Page.html">Performance Metrics</a>
+        <a href="Promotion_Records_Screen.html">Promotion Records</a>
+        <a href="Succession_Planning_Screen.html">Succession Planning</a>
+        <a href="Scheduling_Screen.html">Scheduling</a>
+    </div>
+
+    <div class="container">
+        <h1>Internal Job Postings</h1>
+        <button class="create-job-button" onclick="window.location.href='Create_Job_Post_Screen.html';">Create Job Post</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Job Title</th>
+                    <th>Department</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Software Engineer</td>
+                    <td>IT</td>
+                    <td>New York</td>
+                    <td>
+                        <button class="view-job" data-job-id="1">View</button>
+                        <button class="edit-job" data-job-id="1">Edit</button>
+                        <button class="delete-job" data-job-id="1">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Marketing Manager</td>
+                    <td>Marketing</td>
+                    <td>Los Angeles</td>
+                    <td>
+                        <button class="view-job" data-job-id="2">View</button>
+                        <button class="edit-job" data-job-id="2">Edit</button>
+                        <button class="delete-job" data-job-id="2">Delete</button>
+                    </td>
+                </tr>
+                <!-- Additional job postings can be added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Set the active class based on the current page URL
+        const currentPage = window.location.pathname.split('/').pop();
+        const navbarLinks = document.querySelectorAll('.navbar a');
+
+        navbarLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+        document.querySelectorAll('.view-job').forEach(button => {
+            button.addEventListener('click', function() {
+                const jobId = this.dataset.jobId;
+                alert('View job with ID: ' + jobId);
+            });
+        });
+
+        document.querySelectorAll('.edit-job').forEach(button => {
+            button.addEventListener('click', function() {
+                const jobId = this.dataset.jobId;
+                alert('Edit job with ID: ' + jobId);
+            });
+        });
+
+        document.querySelectorAll('.delete-job').forEach(button => {
+            button.addEventListener('click', function() {
+                const jobId = this.dataset.jobId;
+                alert('Delete job with ID: ' + jobId);
+            });
+        });
+    </script>
+</body>
+</html>

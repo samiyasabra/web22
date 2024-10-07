@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #007bff;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+            margin: 0.2rem;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar a.active {
+            background-color: #0056b3;
+            font-weight: bold;
+        }
+
+        /* Container styling */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        /* Task List Styling */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            width: 800px;
+            
+           
+        }
+
+        li {
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 1rem;
+            transform: scale(1.5);
+        }
+      
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #007bff;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar a {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="HR_Dashboard_Screen.html">Dashboard</a>
+        <a href="Internal_Job_Postings_Screen.html" >Internal Job Postings</a>
+        <a href="External_Job_Postings_Screen.html" >External Job Postings</a>
+        <a href="Employee_Ratings_Screen.html" >Employee Ratings</a>
+        <a href="Shortlisting_Candidates_Screen.html" >Shortlisting Candidates</a>
+        <a href="Onboarding_Checklist_Screen.html" class="active">Onboarding</a>
+        <a href="Performance_Metrics_Page.html">Performance Metrics</a>
+        <a href="Promotion_Records_Screen.html">Promotion Records</a>
+        <a href="Succession_Planning_Screen.html">Succession Planning</a>
+        <a href="Scheduling_Screen.html">Scheduling</a>
+    </div>
+
+    <div class="container">
+        <h1>Onboarding Checklist</h1>
+        <p>Welcome to the onboarding process! Please complete the following tasks:</p>
+        <ul>
+            <li>
+                <input type="checkbox" id="task1">
+                <label for="task1">Complete HR forms and documentation.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task2">
+                <label for="task2">Attend orientation session.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task3">
+                <label for="task3">Set up your workstation.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task4">
+                <label for="task4">Meet with your supervisor.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task5">
+                <label for="task5">Review company policies and procedures.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task6">
+                <label for="task6">Enroll in benefits program.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task7">
+                <label for="task7">Complete training modules.</label>
+            </li>
+            <!-- More tasks can be added here -->
+        </ul>
+    </div>
+
+
+</body>
+</html>

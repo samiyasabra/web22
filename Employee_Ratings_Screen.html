@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Ratings</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* Light gradient */
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #007bff;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%; /* Ensure navbar takes full width */
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+            margin: 0.2rem;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar a.active {
+            background-color: #0056b3;
+            font-weight: bold;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 1200px;
+            text-align: center;
+            margin: 2rem auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        button {
+            padding: 0.7rem 1.2rem;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Responsiveness for mobile devices */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="HR_Dashboard_Screen.html">Dashboard</a>
+        <a href="Internal_Job_Postings_Screen.html">Internal Job Postings</a>
+        <a href="External_Job_Postings_Screen.html">External Job Postings</a>
+        <a href="Employee_Ratings_Screen.html" class="active">Employee Ratings</a>
+        <a href="Shortlisting_Candidates_Screen.html">Shortlisting Candidates</a>
+        <a href="Onboarding_Checklist_Screen.html">Onboarding</a>
+        <a href="Performance_Metrics_Page.html">Performance Metrics</a>
+        <a href="Promotion_Records_Screen.html">Promotion Records</a>
+        <a href="Succession_Planning_Screen.html">Succession Planning</a>
+        <a href="Scheduling_Screen.html">Scheduling</a>
+    </div>
+
+    <div class="container">
+        <h1>Employee Ratings</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Performance Rating</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>4.5</td>
+                    <td><button>Rate Employee</button></td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>4.0</td>
+                    <td><button>Rate Employee</button></td>
+                </tr>
+                <!-- More rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

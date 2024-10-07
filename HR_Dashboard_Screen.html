@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        /* Base styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #2C3E50, #BDC3C7);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header styling */
+        .header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            position: relative; /* Make sure the header can contain absolute positioned elements */
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .header .sign-out {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: #fff;
+            color: #007bff;
+            border: 2px solid transparent; /* Set a transparent border */
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make it inline-block for padding */
+        }
+
+        .header .sign-out:hover {
+            background-color: #007bff;
+            color: #fff;
+            border-color: #fff; /* Change border color on hover */
+        }
+
+        /* Container for cards */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 3rem auto;
+            max-width: 1200px;
+        }
+
+        /* Card styling */
+        .card {
+            background: #fff;
+            width: 320px;
+            margin: 1rem;
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Background gradient animation on hover */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(120deg, #007bff, #74ebd5);
+            transition: all 0.4s ease;
+            transform: skewX(-30deg);
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        /* Card icon and text */
+        .card i {
+            font-size: 3rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            z-index: 1;
+            position: relative;
+        }
+
+        .card-content {
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            color: #555;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Make entire card clickable */
+        .card a {
+            display: block;
+            height: 100%;
+            color: inherit; /* Inherit color from parent */
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+                margin: 1rem 0;
+            }
+        }
+    </style>
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>HR Dashboard</h1>
+        <a href="Login_Screen.html" class="sign-out">Sign Out</a>
+    </div>
+    <div class="container">
+        <div class="card">
+            <a href="Internal_Job_Postings_Screen.html">
+                <i class="fas fa-briefcase"></i>
+                <div>Internal Job Postings</div>
+                <div class="card-content">Manage internal job openings</div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="External_Job_Postings_Screen.html">
+                <i class="fas fa-briefcase"></i>
+                <div>External Job Postings</div>
+                <div class="card-content">Manage external job openings</div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="Shortlisting_Candidates_Screen.html">
+                <i class="fas fa-users"></i>
+                <div>Shortlisting Candidates</div>
+                <div class="card-content">Select potential hires</div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="Onboarding_Checklist_Screen.html">
+                <i class="fas fa-user-plus"></i>
+                <div>Onboarding</div>
+                <div class="card-content">Welcome new employees</div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="Performance_Metrics_Page.html">
+                <i class="fas fa-chart-line"></i>
+                <div>Performance Metrics</div>
+                <div class="card-content">Track employee performance</div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="Promotion_Records_Screen.html">
+                <i class="fas fa-trophy"></i>
+                <div>Promotion Records</div>
+                <div class="card-content">Review promotion history</div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="Succession_Planning_Screen.html">
+                <i class="fas fa-sitemap"></i>
+                <div>Succession Planning</div>
+                <div class="card-content">Prepare for leadership changes</div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="Scheduling_Screen.html">
+                <i class="fas fa-calendar-alt"></i>
+                <div>Scheduling</div>
+                <div class="card-content">Manage employee schedules</div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="Employee_Ratings_Screen.html">
+                <i class="fas fa-star"></i>
+                <div>Employee Ratings</div>
+                <div class="card-content">Evaluate employee performance</div>
+            </a>
+        </div>
+    </div>
+   
+</body>
+</html>

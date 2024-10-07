@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #007bff;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+            margin: 0.2rem;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar a.active {
+            background-color: #0056b3;
+            font-weight: bold;
+        }
+
+       
+
+        .container {
+            max-width: 800px;
+            margin: 6rem auto;
+            padding: 8rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+        .schedule-item {
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .schedule-item:hover {
+            background-color: #f0f8ff;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.8rem;
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+       
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="HR_Dashboard_Screen.html">Dashboard</a>
+        <a href="Internal_Job_Postings_Screen.html" >Internal Job Postings</a>
+        <a href="External_Job_Postings_Screen.html" >External Job Postings</a>
+        <a href="Employee_Ratings_Screen.html" >Employee Ratings</a>
+        <a href="Shortlisting_Candidates_Screen.html" >Shortlisting Candidates</a>
+        <a href="Onboarding_Checklist_Screen.html" >Onboarding</a>
+        <a href="Performance_Metrics_Page.html" >Performance Metrics</a>
+        <a href="Promotion_Records_Screen.html">Promotion Records</a>
+        <a href="Succession_Planning_Screen.html" >Succession Planning</a>
+        <a href="Scheduling_Screen.html" class="active">Scheduling</a>
+    </div>
+    <div class="container">
+        <h1>Scheduling</h1>
+        <div class="schedule-item">
+            <h2>Team Meeting</h2>
+            <p><strong>Date:</strong> 01/05/2024</p>
+            <p><strong>Time:</strong> 10:00 AM</p>
+        </div>
+        <div class="schedule-item">
+            <h2>Project Kickoff</h2>
+            <p><strong>Date:</strong> 01/10/2024</p>
+            <p><strong>Time:</strong> 2:00 PM</p>
+        </div>
+        <!-- More scheduled events can be added here -->
+    </div>
+</body>
+</html>

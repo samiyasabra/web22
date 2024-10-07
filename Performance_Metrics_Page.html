@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Metrics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        /* Base styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            position: relative; /* Keeps positioning for absolute elements */
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #007bff;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            margin-bottom: 20px; /* Gap below navbar */
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+            margin: 0.2rem;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar a.active {
+            background-color: #0056b3;
+            font-weight: bold;
+        }
+
+        /* Header styling */
+        .header {
+            
+            color:  #0e19bd;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Container styling */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto; /* Centering */
+            padding: 1rem; /* Inner padding */
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Chart styling */
+        .chart-container {
+            position: relative;
+            margin: 2rem 0;
+            height: 400px;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="HR_Dashboard_Screen.html">Dashboard</a>
+        <a href="Internal_Job_Postings_Screen.html">Internal Job Postings</a>
+        <a href="External_Job_Postings_Screen.html">External Job Postings</a>
+        <a href="Employee_Ratings_Screen.html">Employee Ratings</a>
+        <a href="Shortlisting_Candidates_Screen.html">Shortlisting Candidates</a>
+        <a href="Onboarding_Checklist_Screen.html">Onboarding</a>
+        <a href="Performance_Metrics_Page.html" class="active">Performance Metrics</a>
+        <a href="Promotion_Records_Screen.html">Promotion Records</a>
+        <a href="Succession_Planning_Screen.html">Succession Planning</a>
+        <a href="Scheduling_Screen.html">Scheduling</a>
+    </div>
+
+    <div class="header">
+        <h1>Performance Metrics</h1>
+    </div>
+
+    <div class="container">
+        <h2>Employee Performance Overview</h2>
+        <table>
+            <tr>
+                <th>Employee Name</th>
+                <th>Department</th>
+                <th>Performance Score</th>
+                <th>Last Review Date</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>Development</td>
+                <td>85</td>
+                <td>01/05/2024</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>Marketing</td>
+                <td>90</td>
+                <td>01/03/2024</td>
+            </tr>
+            <tr>
+                <td>Tom Brown</td>
+                <td>Sales</td>
+                <td>75</td>
+                <td>01/01/2024</td>
+            </tr>
+            <!-- More records can be added here -->
+        </table>
+
+        <h2>Performance Score Chart</h2>
+        <div class="chart-container">
+            <canvas id="performanceChart"></canvas>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 HR Dashboard | All Rights Reserved
+    </footer>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        const performanceChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['John Doe', 'Jane Smith', 'Tom Brown'], // Replace with employee names dynamically if needed
+                datasets: [{
+                    label: 'Performance Score',
+                    data: [85, 90, 75], // Replace with scores dynamically if needed
+                    backgroundColor: 'rgba(0, 123, 255, 0.6)',
+                    borderColor: 'rgba(0, 123, 255, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Score'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                    },
+                }
+            }
+        });
+    </script>
+</body>
+</html>

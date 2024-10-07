@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External Job Postings</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        /* Global styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #007bff;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+            margin: 0.2rem;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar a.active {
+            background-color: #0056b3;
+            font-weight: bold;
+        }
+
+        /* Container styling */
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 2rem;
+        }
+
+        /* Job posting styling */
+        .job-posting {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .job-posting:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .job-actions {
+            display: flex;
+            justify-content: flex-start;
+            gap: 0.5rem;
+        }
+
+        .job-actions button {
+            background-color: #007bff;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .job-actions button:hover {
+            background-color: #0056b3;
+        }
+
+        /* New Job Post Button Styling */
+        .new-job-button {
+            background-color: #28a745;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-bottom: 2rem;
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .new-job-button:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        .new-job-button:active {
+            background-color: #1e7e34;
+            transform: translateY(0);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .job-actions button {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .new-job-button {
+                font-size: 1rem;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="HR_Dashboard_Screen.html">Dashboard</a>
+        <a href="Internal_Job_Postings_Screen.html">Internal Job Postings</a>
+        <a href="External_Job_Postings_Screen.html" class="active">External Job Postings</a>
+        <a href="Employee_Ratings_Screen.html">Employee Ratings</a>
+        <a href="Shortlisting_Candidates_Screen.html">Shortlisting Candidates</a>
+        <a href="Onboarding_Checklist_Screen.html">Onboarding</a>
+        <a href="Performance_Metrics_Page.html">Performance Metrics</a>
+        <a href="Promotion_Records_Screen.html">Promotion Records</a>
+        <a href="Succession_Planning_Screen.html">Succession Planning</a>
+        <a href="Scheduling_Screen.html">Scheduling</a>
+    </div>
+
+    <div class="container">
+        <h1>External Job Postings</h1>
+        <button class="new-job-button" onclick="window.location.href='Create_Job_Post_Screen.html';">New Job Post</button>
+
+        <!-- Job Posting 1 -->
+        <div class="job-posting">
+            <h2>Frontend Developer</h2>
+            <p><strong>Location:</strong> Remote</p>
+            <div class="job-actions">
+                <button onclick="alert('Viewing job ID: 1');">View</button>
+                <button onclick="alert('Edit feature coming soon!');">Edit</button>
+                <button onclick="alert('Delete feature coming soon!');">Delete</button>
+            </div>
+        </div>
+
+        <!-- Job Posting 2 -->
+        <div class="job-posting">
+            <h2>Marketing Manager</h2>
+            <p><strong>Location:</strong> San Francisco</p>
+            <div class="job-actions">
+                <button onclick="alert('Viewing job ID: 2');">View</button>
+                <button onclick="alert('Edit feature coming soon!');">Edit</button>
+                <button onclick="alert('Delete feature coming soon!');">Delete</button>
+            </div>
+        </div>
+
+        <!-- Add more job postings as needed -->
+    </div>
+
+    <script>
+        document.querySelectorAll('.job-actions button').forEach(button => {
+            button.addEventListener('click', function() {
+                const action = this.textContent.trim();
+                alert(action + ' feature coming soon!');
+                // Implement actual functionality for "View," "Edit," and "Delete" actions.
+            });
+        });
+    </script>
+</body>
+</html>
